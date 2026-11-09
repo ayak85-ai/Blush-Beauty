@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush Beauty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+   
+ 
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="#home">Blush<span>✿</span><small>BEAUTY</small></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto gap-lg-4">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+
+<main id="products" class="container py-5">
+  <div class="input-group input-group-lg mb-4">
+    <span class="input-group-text search-icon">⌕</span>
+    <input id="searchInput" type="search" class="form-control search-input" placeholder="Search Products...">
+    <button id="searchButton" class="btn btn-brand px-4">Search</button>
+  </div>
+  <div class="d-flex flex-wrap gap-2 mb-4 category-filters">
+    <button class="btn filter-button active" data-filter="All">All Products</button>
+    <button class="btn filter-button" data-filter="Makeup">💄 Makeup</button>
+    <button class="btn filter-button" data-filter="Skin Care">🧴 Skin Care</button>
+    <button class="btn filter-button" data-filter="Hair Care">🧴 Hair Care</button>
+  </div>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="section-title mb-0">Our Products</h2><span id="resultsCount" class="text-secondary small">Loading products...</span>
+  </div>
+  <div id="productsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    <p class="text-center text-secondary py-5">Loading beauty products...</p>
+  </div>
+</main>
+
+<section id="about" class="about-section py-5 text-center">
+  <div class="container"><h2 class="section-title">Beauty in Every Choice</h2><p class="text-secondary mb-0">Makeup, skin care and hair care essentials in one place.</p></div>
+</section>
+<footer id="contact" class="footer-section text-center py-4">
+  <a class="footer-logo" href="#home">Blush Beauty</a><p class="mb-2">Feel beautiful. Be confident.</p><small>© 2026 Blush Beauty. All rights reserved.</small>
+</footer>
+
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content border-0 rounded-4">
+      <div class="modal-header border-0"><h5 class="modal-title section-title">Product Details</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body"><div class="row align-items-center g-4">
+        <div class="col-md-5 text-center"><img id="modalImage" class="img-fluid modal-product-image" src="" alt=""></div>
+        <div class="col-md-7">
+          <p id="modalCategory" class="text-secondary mb-1"></p><h2 id="modalTitle" class="h4 fw-bold"></h2>
+          <p id="modalBrand"></p><p id="modalRating" class="rating"></p><p id="modalDescription" class="text-secondary"></p>
+          <h3 id="modalPrice" class="product-price"></h3><p id="modalStock"></p>
+          <button id="addToCartButton" class="btn btn-brand w-100">Add to Cart</button>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> 
+</script>
+   <script src="main.js"></script>
+</body>
+</html>
